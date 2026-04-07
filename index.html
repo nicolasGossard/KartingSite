@@ -1,57 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8"><title>Elite Racing | Next Gen</title>
+    <meta charset="UTF-8"><title>Elite Racing | Accueil</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="nav-wrapper"><nav><a href="index.html" class="active">Accueil</a><a href="team.html">Équipe</a><a href="leaderboard.html">Leaderboard</a></nav></div>
     
-    <div class="theme-switch" id="theme-toggle">
-        <div class="switch-dot"><span id="theme-icon">🌙</span></div>
-    </div>
+    <div class="theme-switch" id="theme-toggle"><div class="switch-dot" id="theme-icon">🌙</div></div>
 
     <section class="hero-title-centered">
-    <h1 class="reveal" style="font-size: clamp(60px, 12vw, 140px); font-weight: 800; letter-spacing: -4px; line-height: 0.9;">
-        Elite Racing.
-    </h1>
-    <p class="reveal" style="font-size: 20px; color: var(--accent); font-weight: 700; letter-spacing: 6px; margin-top: 20px; text-transform: uppercase;">
-        Dominez l'asphalte
-    </p>
-    <div class="reveal" style="margin-top: 50px; animation: bounce 2s infinite; font-size: 30px; opacity: 0.5;">
-        ↓
+        <h1 class="reveal" style="font-size: clamp(60px, 12vw, 140px); font-weight: 800; letter-spacing: -4px;">Elite Racing.</h1>
+        <p class="reveal" style="font-size: 20px; color: var(--accent); font-weight: 700; letter-spacing: 6px; text-transform: uppercase;">Next-Gen Browser Racing</p>
+        <div class="reveal" style="margin-top: 50px; animation: bounce 2s infinite; font-size: 30px; opacity: 0.3;">↓</div>
+    </section>
+
+    <div style="max-width: 1100px; margin: auto; padding: 0 20px;">
+        <div class="reveal video-container" style="margin-bottom: 100px;">
+            <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1&rel=0&modestbranding=1" allowfullscreen></iframe>
+        </div>
+
+        <h2 class="reveal" style="font-size: 40px; text-align: center; margin-bottom: 40px;">Immersion totale.</h2>
+        <div class="gallery-grid">
+            <div class="reveal gallery-item wide"><h3>Vitesse Pure</h3></div>
+            <div class="reveal gallery-item"><h3>Physiques Drift</h3></div>
+            <div class="reveal gallery-item"><h3>Global Leaderboard</h3></div>
+        </div>
+
+        <section style="text-align: center; padding: 100px 0 200px;">
+            <h2 class="reveal" style="font-size: 55px; font-weight: 800; margin-bottom: 40px;">Prêt à entrer dans <br><span style="color: var(--accent);">la légende ?</span></h2>
+            <a href="leaderboard.html" class="reveal cta-massive">DÉFIER LE CLASSEMENT</a>
+        </section>
     </div>
-	</section>
 
-	<section style="max-width: 900px; margin: 0 auto 100px; text-align: center; padding: 0 20px;">
-		<h2 class="reveal" style="font-size: 48px; margin-bottom: 25px; font-weight: 800;">L'adrénaline pure.</h2>
-		<p class="reveal" style="color: var(--text-dim); font-size: 21px; line-height: 1.6;">
-			Vivez la simulation de course la plus intense sur le Web. 
-			<span style="color: var(--text);">Pas de téléchargement</span>, juste de la vitesse brute.
-		</p>
-	</section>
-
-	<div style="max-width: 1100px; margin: 0 auto 150px; padding: 0 20px;">
-		<div class="reveal video-container">
-			<iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1&modestbranding=1&rel=0" allowfullscreen></iframe>
-		</div>
-	</div>
-
-	<section style="text-align: center; padding-bottom: 150px;">
-		<div class="reveal" style="background: var(--card); padding: 80px 40px; border-radius: 40px; border: 1px solid var(--border); max-width: 800px; margin: auto;">
-			<h2 style="font-size: 40px; margin-bottom: 30px;">Prêt à entrer dans la légende ?</h2>
-			<a href="leaderboard.html" class="cta-massive">REJOINDRE LA COURSE</a>
-		</div>
-	</section>
-</body>
     <script>
-        // REVEAL ANIMATION
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
 
-        // THEME TOGGLE LOGIC
         const toggle = document.getElementById('theme-toggle');
         const icon = document.getElementById('theme-icon');
         const applyTheme = (t) => {
