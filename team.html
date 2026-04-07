@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"><title>Team | Elite Racing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-wrapper"><nav><a href="index.html">Accueil</a><a href="team.html" class="active">Équipe</a><a href="leaderboard.html">Leaderboard</a></nav></div>
+    <button id="theme-btn" class="theme-toggle">MODE CLAIR</button>
+
+    <section class="hero-title-centered">
+        <h1 class="reveal" style="font-size: clamp(40px, 8vw, 70px); font-weight: 800;">L'Équipe.</h1>
+        <div class="reveal" style="margin-top: 20px; animation: bounce 2s infinite; font-size: 24px;">↓</div>
+    </section>
+
+    <div style="padding: 0 20px 150px;">
+        <h2 class="reveal team-section-title"><span>01.</span> Game Progs</h2>
+        <div class="team-grid" style="margin-bottom: 100px;">
+            <div class="reveal flip-card"><div class="flip-card-inner"><div class="card-front"><div class="member-photo"></div><h3>Dev 1</h3><p style="color:var(--accent)">Lead Engine</p></div><div class="card-back"><h3>Social</h3><p>Architecture GPU</p></div></div></div>
+            <div class="reveal flip-card"><div class="flip-card-inner"><div class="card-front"><div class="member-photo"></div><h3>Dev 2</h3><p style="color:var(--accent)">Physics</p></div><div class="card-back"><h3>Social</h3><p>Physique Drift</p></div></div></div>
+            <div class="reveal flip-card"><div class="flip-card-inner"><div class="card-front"><div class="member-photo"></div><h3>Dev 3</h3><p style="color:var(--accent)">Network</p></div><div class="card-back"><h3>Social</h3><p>Multiplayer</p></div></div></div>
+            <div class="reveal flip-card"><div class="flip-card-inner"><div class="card-front"><div class="member-photo"></div><h3>Dev 4</h3><p style="color:var(--accent)">Backend</p></div><div class="card-back"><h3>Social</h3><p>LootLocker API</p></div></div></div>
+        </div>
+
+        <h2 class="reveal team-section-title"><span>02.</span> Game Arts</h2>
+        <div class="team-grid">
+            <div class="reveal flip-card"><div class="flip-card-inner"><div class="card-front"><div class="member-photo"></div><h3>Art 1</h3><p style="color:var(--accent)">VFX</p></div><div class="card-back"><h3>Social</h3><p>Shaders & Glow</p></div></div></div>
+            <div class="reveal flip-card"><div class="flip-card-inner"><div class="card-front"><div class="member-photo"></div><h3>Art 2</h3><p style="color:var(--accent)">3D Art</p></div><div class="card-back"><h3>Social</h3><p>Models</p></div></div></div>
+            <div class="reveal flip-card"><div class="flip-card-inner"><div class="card-front"><div class="member-photo"></div><h3>Art 3</h3><p style="color:var(--accent)">UI/UX</p></div><div class="card-back"><h3>Social</h3><p>Interface</p></div></div></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        gsap.to(".reveal", { opacity: 1, y: 0, duration: 1, stagger: 0.1 });
+        // Theme Logic...
+    </script>
+</body>
+</html>
